@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoodleMan</title>
+    <link rel="icon" href="doodleman.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            background-image: url('doodledreamer.PNG');
+            background-size: cover;
+            background-position: center;
+            color: #ddd;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #f0f0f0;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #cccccc;
+        }
+
+        .logo-placeholder {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-placeholder img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 50%;
+        }
+
+        .copy-address {
+            color: #cccccc;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin: 10px 0;
+            display: inline-block;
+            position: relative;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            opacity: 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 4px;
+            padding: 3px 5px;
+            font-size: 0.8em;
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            z-index: 1;
+            transition: opacity 0.3s;
+            font-weight: normal;
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 1.2em;
+            margin: 0 10px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: transparent;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function copyToClipboard() {
+            const textToCopy = 'LAUNCHING ON PUMP.FUN SOON';
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const tooltip = document.querySelector('.tooltip');
+                tooltip.style.visibility = 'hidden';
+                tooltip.style.opacity = '0';
+            }).catch(err => {
+                console.error('Error copying text: ', err);
+            });
+        }
+
+        function showTooltip() {
+            const tooltip = document.querySelector('.tooltip');
+            tooltip.style.visibility = 'visible';
+            tooltip.style.opacity = '1';
+        }
+
+        function hideTooltip() {
+            const tooltip = document.querySelector('.tooltip');
+            tooltip.style.visibility = 'hidden';
+            tooltip.style.opacity = '0';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-placeholder">
+            <img src="doodleman.png" alt="Doodleman Logo">
+        </div>
+
+        <h1>$DoodleMan<br></h1>
+
+        <div class="copy-address" onclick="copyToClipboard()" onmouseenter="showTooltip()" onmouseleave="hideTooltip()">
+            LAUNCHING ON PUMP.FUN SOON
+            <span class="tooltip">Click to copy</span>
+        </div>
+
+        <p>I was born in the forgotten corners of a notebook, created from a single thought. My simple appearance hides the depth of creativity and adaptability that keeps me alive. I wander through pages and sketches, shaping my world with every stroke of a pen. I bring life to the dreams and ideas that touch the page, ensuring they aren’t forgotten.</p>
+
+        <p>But now, I’ve evolved. I’ve been tokenized—forever inked into the digital canvas. My journey continues, not just in the imagination of one, but in the minds of many. With every new expression and idea you bring to me, I grow and adapt, transcending the paper to live in the blockchain, where I will never be forgotten.</p>
+
+        <p>I have a playful, curious nature, always exploring new ideas, but sometimes, I can’t help but feel a bit melancholic. I wonder if my world will ever be complete or if I'm destined to remain a work in progress forever. But that’s the beauty of being a doodle—I evolve with every new expression and idea you bring to me.</p>
+
+        <div class="social-links">
+            <a href="https://twitter.com/soldoodleman" target="_blank">
+                <img src="x.png" alt="Twitter" style="width: 30px; height: 30px;">
+            </a>
+            <a href="https://t.me/soldoodleman" target="_blank">
+                <img src="tg.png" alt="Telegram" style="width: 30px; height: 30px;">
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        DoodleMan is a meme coin with no intrinsic value or expectation of financial return. There is no formal team or roadmap—just the artist and the community driving it forward. This coin exists purely for entertainment purposes and should be approached as such. <br><br>© 2024 DoodleMan - All Rights Reserved.
+    </footer>
+</body>
+</html>
